@@ -1,0 +1,12 @@
+[Unit]
+Description=node_exporter
+StartLimitIntervalSec=0
+
+[Service]
+Type=exec
+KillMode=process
+ExecStart=node_exporter
+
+[Install]
+WantedBy=multi-user.target
+
