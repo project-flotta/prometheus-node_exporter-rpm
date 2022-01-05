@@ -5,7 +5,7 @@ StartLimitIntervalSec=0
 [Service]
 Type=exec
 KillMode=process
-ExecStart=node_exporter
+ExecStart=node_exporter --web.listen-address=localhost:9100 --web.disable-exporter-metrics
 
 [Install]
 WantedBy=multi-user.target
