@@ -5,7 +5,7 @@ Version:    1.3.1
 Release:    1%{?dist}
 Summary:    Prometheus Node Exporter
 ExclusiveArch: %{go_arches}
-Group:      K4E
+Group:      Flotta
 License:    GPL
 Source0:    %{name}-%{version}.tar.gz
 
