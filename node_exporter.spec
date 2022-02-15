@@ -23,7 +23,7 @@ tar fx %{SOURCE0}
 
 %build
 cd %{name}-%{VERSION}
-make build
+go build
 
 %install
 cd %{name}-%{VERSION}

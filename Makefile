@@ -22,3 +22,7 @@ rpm-build: rpm-src
 
 rpm: ## Create rpm build
 rpm: rpm-build
+
+
+rpm-copr: rpm-src
+	copr build project-flotta/flotta $(HOME)/rpmbuild/SRPMS/node_exporter-$(VERSION)-$(RELEASE).*.src.rpm
