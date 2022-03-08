@@ -18,12 +18,12 @@ Provides:       golang(%{go_import_path}) = %{version}-%{release}
 %description
 The Prometheus Node Exporter collects and exposes system metrics.
 
-%prep 
+%prep
 tar fx %{SOURCE0}
 
 %build
 cd %{name}-%{VERSION}
-go build
+go build --mod=vendor
 
 %install
 cd %{name}-%{VERSION}

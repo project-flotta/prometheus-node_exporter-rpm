@@ -4,6 +4,7 @@ DIST_DIR = $(shell pwd)/dist
 
 node_exporter:
 	git clone -b v$(VERSION) https://github.com/prometheus/node_exporter.git
+	cd node_exporter; go mod vendor
 
 rpm-tarball: node_exporter
 	cp -R node_exporter.service node_exporter
