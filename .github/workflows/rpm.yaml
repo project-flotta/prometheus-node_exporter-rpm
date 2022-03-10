@@ -13,6 +13,11 @@ jobs:
       - name: Check out proper version of sources
         uses: actions/checkout@v1
 
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
       - name: Install API token for copr-cli
         env:
           API_TOKEN_CONTENT: ${{ secrets.COPR_API_TOKEN }}
